@@ -1,0 +1,114 @@
+@import "~@protego/sdk/RegtankUI/v1/styles/global.scss";
+.widthfull {
+  width: 100%;
+  input {
+    padding-right: 0 !important;
+  }
+  svg {
+    cursor: pointer;
+  }
+}
+
+.datePickerCustom {
+  border: 1px solid #eceef0;
+  border-radius: 6px;
+  width: toRem(370);
+  padding: toRem(16);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+:global(.react-datepicker) {
+  :global(.react-datepicker__header) {
+    margin-bottom: toRem(16);
+  }
+
+  :global(.react-datepicker__day-names) {
+    display: none;
+  }
+  :global(.react-datepicker__month) {
+    :global(.react-datepicker__week) {
+      display: flex;
+      justify-content: space-around;
+      :global(.react-datepicker__day) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: toRem(48);
+        height: toRem(48);
+        border-radius: 8px;
+        color: $grayText;
+        letter-spacing: toRem(0.12);
+        font-weight: 500;
+        font-size: toRem(12);
+        line-height: toRem(16);
+        &:global(.react-datepicker__day--selected) {
+          background-color: $primary;
+          color: #fff;
+        }
+        &:global(.react-datepicker__day--outside-month) {
+          color: $grayLight;
+        }
+        &:not(:global(.react-datepicker__day--outside-month)):hover {
+          background-color: $primary;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.headerDatePicker {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  & > svg {
+    font-size: toRem(24);
+    cursor: pointer;
+    color: $mainBlackText;
+  }
+}
+
+.headerMiddleDatePicker {
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    width: auto;
+    &:not(:last-child) {
+      margin-right: toRem(8);
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      height: toRem(40);
+      :global(.MuiSelect-select) {
+        margin-bottom: 0;
+      }
+      :global(.MuiSvgIcon-root) {
+        top: calc(50% - 4px);
+      }
+      :global(.MuiOutlinedInput-notchedOutline) {
+        border: 1px solid #dbdde0;
+        box-sizing: border-box;
+        border-radius: 8px;
+        top: 0;
+      }
+    }
+  }
+}
+.inputActive {
+  :global(label.MuiInputLabel-formControl) {
+    color: $primary !important;
+  }
+  :global(.MuiInput-root::after) {
+    transform: scaleX(1);
+  }
+  :global(.MuiInputBase-input) {
+    color: $primary !important;
+    &::placeholder {
+      color: $primary !important;
+    }
+    &+svg path{
+      fill: $primary !important;
+    }
+  }
+}

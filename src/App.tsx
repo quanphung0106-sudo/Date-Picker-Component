@@ -1,9 +1,9 @@
-import Form from "./components/form/Form";
+import MultiDatePicker from './components/multiDatePicker/MultiDatePicker'
 
 function App() {
   return (
     <div className="App">
-      <Form />
+      <MultiDatePicker />
     </div>
   );
 }

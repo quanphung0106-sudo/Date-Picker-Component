@@ -1,0 +1,51 @@
+@import "~@protego/sdk/RegtankUI/v1/styles/global.scss";
+.dateRangePicker {
+  :global(.rdrDay) {
+    height: 52px;
+  }
+  :global(.rdrNextPrevButton) {
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    // &:hover{
+    //   background: #0080FF;
+    // }
+    i {
+      border-color: #232323;
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+      border-right: 2px;
+      border-top: 2px;
+      box-sizing: border-box;
+      width: 11px;
+      height: 11px;
+      margin: 0 auto;
+    }
+  }
+  :global(.rdrPprevButton) {
+    left: 6px;
+    i {
+      transform: rotate(45deg);
+      position: relative;
+      left: 2px;
+    }
+  }
+  :global(.rdrNextButton) {
+    right: 6px;
+    i {
+      transform: rotate(-135deg);
+      position: relative;
+      right: 2px;
+    }
+  }
+  :global(.rdrMonthPicker),
+  :global(.rdrYearPicker) {
+    border: 1px solid #dbdde0;
+    border-radius: toRem(8);
+    select:hover {
+      background-color: #ffffff;
+    }
+  }
+}

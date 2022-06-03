@@ -14,20 +14,46 @@
 .datePicker {
   font-family: 'Montserrat';
   width: 750px;
-  height: 416px;
+  height: 460px;
   background-color: #fff;
   border: 1px solid #ebebf0;
   /* dropdown/shadow opened */
   font-size: 12px;
+
+  /* dropdown/shadow opened */
 
   box-shadow: 0px 0px 8px rgba(37, 40, 43, 0.12);
   border-radius: 8px;
   position: relative;
 }
 
+.rdrMonthAndYearPickers {
+  padding: 24px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .monthAndYearWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .rdrMonthPickers {
+  }
+}
+
 .rdrDateRangePickerWrapper {
   width: 100%;
-  height: 100%;
+
+  .rdrMonthAndYearWrapper {
+    display: none;
+
+    button {
+      display: none;
+    }
+
+    .rdrMonthAndYearPickers {
+    }
+  }
 
   span {
     font-weight: 300;
@@ -65,6 +91,9 @@
       .rdrWeekDays {
         display: none;
       }
+    }
+
+    rdrDayToday:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span:after {
     }
 
     .rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span,
